@@ -25,12 +25,12 @@ System dependencies (optional, APIs can be powered by bottle alone):
 
 `apt-get install gunicorn` 
 
-Python dependencies (that can be installed inside a virtualenv):
+Installing the package (this will install dependencies as well):
 
-`pip install bottle`
-`pip install pyephem`
-`pip install sqlite3`
-`pip install requests`
+Run: `python setup.py install` in the "satlocator" directory.
+
+NOTE: This will copy the files over to your python directory, so if you later wish to modify the configuration, you should do it there.
+Alternatively, use "develop" instead of "install" so that the files will not be copied.
 
 and it's accessible through a dead simple web api:
 
@@ -40,7 +40,7 @@ More complicated (though probably preferable) invocations of gunicorn are provid
 
 Alternatively, it can be called simply via python:
 
-`python tracker_admin_api.py`
+`python tracker_admin_api.py` or by running `tracker_admin_api` anywhere on the system.
 
 NOTE: In order to make calls to SpaceTrack API, you need to add proper credentials for it in tracker_config.py!
 
